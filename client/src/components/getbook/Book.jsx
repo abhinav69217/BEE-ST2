@@ -21,7 +21,7 @@ const Book = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/getall?category=${category}&sort=${sort}`
+          `https://booksnap-iuz6.onrender.com/api/getall?category=${category}&sort=${sort}`
         );
         setBooks(response.data);
       } catch (error) {
@@ -34,7 +34,7 @@ const Book = () => {
 
   const deleteBook = async (bookId) => {
     await axios
-      .delete(`http://localhost:8000/api/delete/${bookId}`)
+      .delete(`https://booksnap-iuz6.onrender.com/api/delete/${bookId}`)
       .then((respones) => {
         setBooks((prevBook) => prevBook.filter((book) => book._id !== bookId));
         toast.success("Book deleted successfully", { position: "top-right" });

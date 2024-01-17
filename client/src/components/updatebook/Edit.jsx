@@ -27,7 +27,7 @@ const Edit = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/getone/${id}`)
+      .get(`https://booksnap-iuz6.onrender.com/api/getone/${id}`)
       .then((response) => {
         setBook(response.data);
       })
@@ -39,7 +39,7 @@ const Edit = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .put(`https://backendstserver.onrender.com/api/update/${id}`, book)
+      .put(`https://booksnap-iuz6.onrender.com/api/update/${id}`, book)
       .then((response) => {
         toast.success("Book updated successfully", { position: "top-right" });
         navigate("/");
