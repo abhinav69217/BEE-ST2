@@ -26,7 +26,7 @@ const Add = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .post("https://backendstserver.onrender.com/api/create", book)
+      .post("http://localhost:8000/api/create", book)
       .then((response) => {
         toast.success("Book added successfully", { position: "top-right" });
         navigate("/");
@@ -36,22 +36,35 @@ const Add = () => {
 
   return (
     <div className="w-ful bg-red-100">
-      <div class="area h-[800px]" >
-            <ul class="circles">
-                    <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
+      <div class="area h-[800px]">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <div class="login-box w-full">
         <Link to={"/"} className="text-black text-lg underline">
           Back
         </Link>
-        <h2 className="underline mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl ">ADD BOOK</h2>
+        <h2 className="underline mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl ">
+          ADD BOOK
+        </h2>
         <form className="" onSubmit={submitForm}>
           <div class="user-box">
             <input

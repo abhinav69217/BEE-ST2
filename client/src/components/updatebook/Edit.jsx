@@ -27,7 +27,7 @@ const Edit = () => {
 
   useEffect(() => {
     axios
-      .get(`https://backendstserver.onrender.com/api/getone/${id}`)
+      .get(`http://localhost:8000/api/getone/${id}`)
       .then((response) => {
         setBook(response.data);
       })
@@ -49,25 +49,27 @@ const Edit = () => {
 
   return (
     <div className="flex-col justify-center items-center ">
-      <div class="area h-[800px]" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
+      <div class="area h-[800px]">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <div class="login-box">
         <Link to={"/"} className="text-black underline text-lg">
           Back
         </Link>
-        <h2 className="underline mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl uppercase">Update Book</h2>
+        <h2 className="underline mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl uppercase">
+          Update Book
+        </h2>
         <form className="" onSubmit={submitForm}>
           <div class="user-box">
             <input
@@ -164,34 +166,6 @@ const Edit = () => {
           </div>
         </form>
       </div>
-
-      {/* <form >
-            <div className="inputGroup">
-                
-                
-            </div>
-            <div className="inputGroup">
-                <label htmlFor="code">Code</label>
-                <input type="Number" value={book.code} onChange={inputChangeHandler} id="code" name="code" autoComplete='off' placeholder='Book Code' />
-            </div>
-            <div className="inputGroup">
-                <label htmlFor="authName">Author's Name</label>
-                <input type="text" value={book.authName} onChange={inputChangeHandler} id="authName" name="authName" autoComplete='off' placeholder='Author Name' />
-            </div><div className="inputGroup">
-                <label htmlFor="pubName">Publisher's Name</label>
-                <input type="text" value={book.pubName} onChange={inputChangeHandler} id="pubName" name="pubName" autoComplete='off' placeholder='Publisher Name' />
-            </div>
-            <div className="inputGroup">
-                <label htmlFor="price">Price (In Rs.)</label>
-                <input type="Number" value={book.price} onChange={inputChangeHandler} id="price" name="price" autoComplete='off' placeholder='Book Price' />
-            </div>
-            <div className="inputGroup">
-                
-            </div>
-            <div className="inputGroup">
-                <button type="submit">UPDATE BOOK</button>
-            </div>
-        </form> */}
     </div>
   );
 };

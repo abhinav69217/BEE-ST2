@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
-  "author": "Sajal Nanda",
+  "author": "Abhinav Jangra",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
