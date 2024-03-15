@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//book
 const bookSchema = new mongoose.Schema({
   imgLink: {
     type: String,
